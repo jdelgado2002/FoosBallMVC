@@ -28,5 +28,13 @@ namespace FoosBallMVC.Controllers
 
             return View();
         }
+
+        [Authorize]
+        public ActionResult PrivatePage()
+        {
+            ViewBag.Message = "This page requires the user to be authenticated";
+
+            return View();
+        }
     }
 }
